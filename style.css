@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Nav */
+#navbar {
+  position: fixed;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 1.5rem 0;
+  z-index: 1000;
+}
+
+#navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  float: right;
+}
+
+#navbar .nav-links li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+#navbar .nav-links li a:hover,
+#navbar .nav-links li a.active {
+  color: cyan;
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: cyan;
+}
+
+/* Sections */
+.section {
+  padding: 6rem 0;
+  background-color: #1a1a1a;
+}
+
+.section.dark {
+  background-color: #111;
+}
+
+/* Home */
+#profile-pic {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid cyan;
+  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+  margin: 2rem auto 3rem;
+  display: block;
+}
+
+#profile-pic.scrolled {
+  transform: rotate(360deg) scale(0.8);
+  width: 200px;
+  height: 200px;
+}
+
+.text-center h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: cyan;
+  color: black;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid cyan;
+  color: cyan;
+}
+
+.btn:hover {
+  transform: scale(0.95);
+}
+
+/* Skills */
+.skills-card {
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.skill-bar {
+  margin-bottom: 1.5rem;
+}
+
+.progress {
+  background: #444;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress span {
+  display: block;
+  background: cyan;
+  height: 100%;
+  text-align: right;
+  color: black;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 0;
+  top: -1.5em;
+  white-space: nowrap;
+}
+
+/* Cards */
+.card {
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.school {
+  color: cyan;
+}
+
+.year {
+  color: gray;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.project-card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.tech-stack span {
+  background: cyan;
+  color: black;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.view-project {
+  display: inline-block;
+  color: cyan;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+i {
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 2rem 0;
+  text-align: center;
+  color: gray;
+}
